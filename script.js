@@ -37,7 +37,7 @@ const playRound = (playerSelection, computerSelection) => {
     inputToLowercase != "paper" ||
     inputToLowercase != "scissors"
   )
-    return `Invalid input "${playerSelection}"! Please select from Rock, Paper, Scissors`;
+    return `Invalid input "${playerSelection}"! Please select from Rock, Paper, or Scissors`;
 };
 
 const game = () => {
