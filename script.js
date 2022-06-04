@@ -55,7 +55,7 @@ const game = () => {
     else if (result.includes("Lose")) computerScore++;
     console.log(result);
     console.log(
-      `Current Score = you: ${yourScore} - computer: ${computerScore}`
+      `Round ${i+1} Score = you: ${yourScore} - computer: ${computerScore}`
     );
     console.log(" ");
   }
