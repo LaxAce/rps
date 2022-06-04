@@ -41,13 +41,27 @@ const playRound = (playerSelection, computerSelection) => {
 };
 
 const game = () => {
+    let yourScore = 0;
+    let computerScore = 0;
+
   for (let i = 0; i < 5; i++) {
     let playerSelection = prompt(
       "Make a wise choice! Rock, Paper, or Scissors"
     );
+    
     const computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
+    const result = playRound(playerSelection, computerSelection);
+    if(result.includes('Won')) yourScore++
+    if(result.includes('Lose')) computerScore++
+    console.log(result)
+    console.log( `Current Score = you: ${yourScore} - computer: ${computerScore}`)
+    console.log(' ')
   }
+
+  console.log(' ')
+  if (yourScore > computerScore) console.log('**********YOU WON THE GAME**********')
+  if (computerScore > yourScore) console.log('**********COMPUTER WON THE GAME**********')
+  if (yourScore == computerScore) console.log('******** DRAW!! ************')
 };
 
 game();
